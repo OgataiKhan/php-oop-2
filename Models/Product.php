@@ -8,21 +8,16 @@ class Product
   protected $name;
   protected $price;
   protected $available = false;
+  protected $img = "no-img.jpg";
+  protected $designed_for;
 
-  /**
-   * __construct
-   *
-   * @param  mixed $_name
-   * @param  mixed $_price
-   * @param  mixed $_available
-   * @param  mixed $_year
-   * @return void
-   */
-  public function __construct(string $_name, string $_price, bool $_available)
+  public function __construct(string $_name, string $_price, bool $_available, string $_img, string $_designed_for)
   {
     $this->set_name($_name);
     $this->set_price($_price);
     $this->set_available($_available);
+    $this->set_img($_img);
+    $this->set_designed_for($_designed_for);
   }
 
   /**
@@ -87,4 +82,48 @@ class Product
   {
     return $this->available;
   }
+
+  /**
+   * set_img
+   *
+   * @param mixed $img
+   * @return void
+   */
+  public function set_img($img)
+  {
+    $this->img = $img;
+  }
+
+  /**
+   * get_img
+   *
+   * @return void
+   */
+  public function get_img()
+  {
+    return $this->img;
+  }
+
+    /**
+   * set_designed_for
+   *
+   * @param mixed $designed_for
+   * @return void
+   */
+  public function set_designed_for($designed_for)
+  {
+    $this->designed_for = $designed_for;
+  }
+
+  /**
+   * get_designed_for
+   *
+   * @return void
+   */
+  public function get_designed_for()
+  {
+    return $this->designed_for;
+  }
 }
+
+
