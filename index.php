@@ -82,6 +82,7 @@ require_once __DIR__ . '/Controllers/ControllerCart.php';
         <?php endforeach; ?>
         <!-- /Bed cards -->
       </ul>
+      <!-- Cart total -->
       <p class="text-center fs-3"><?php if ($active_user->get_credit_card() instanceof CreditCard) {
         echo "Cart total: " . $totalPrice . "€";
       } elseif ($active_user->get_credit_card() === 'Expired') {
@@ -89,6 +90,7 @@ require_once __DIR__ . '/Controllers/ControllerCart.php';
       } else {
         echo 'There is an error with your card, please try again';
       } ?></p>
+      <!-- /Cart total -->
     </div>
   </main>
 </body>
