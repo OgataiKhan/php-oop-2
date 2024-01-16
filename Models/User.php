@@ -34,7 +34,6 @@ class User
   /**
    * get_discount
    *
-   * @return void
    */
   public function get_discount()
   {
