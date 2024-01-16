@@ -3,7 +3,7 @@
 class RegisteredUser extends User {
   private $username;
 
-  public function __construct($_username, $_creditCard = null) {
+  public function __construct(string $_username, $_creditCard = null) {
       parent::__construct($_creditCard);
       $this->set_username($_username);
   }

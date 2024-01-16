@@ -51,7 +51,7 @@ class Product
   {
     $this->price = $price;
   }
-
+  
   /**
    * get_price
    *

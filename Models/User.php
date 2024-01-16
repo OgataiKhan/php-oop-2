@@ -49,7 +49,7 @@ class User
   public function get_credit_card()
   {
     if ($this->credit_card !== null) {
-      if ($this->credit_card->get_expiration_year() > 2024) {
+      if ($this->credit_card->get_expiration_year() < 2024) {
         return "Expired";
       } else {
         return $this->credit_card;
