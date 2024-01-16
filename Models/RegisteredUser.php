@@ -1,0 +1,41 @@
+<?php
+
+class RegisteredUser extends User {
+  private $username;
+
+  public function __construct($_username, $_creditCard = null) {
+      parent::__construct($_creditCard);
+      $this->set_username($_username);
+  }
+
+/**
+   * set_username
+   *
+   * @param mixed $username
+   * @return void
+   */
+  public function set_username($username)
+  {
+    $this->username = $username;
+  }
+
+  /**
+   * get_username
+   *
+   * @return void
+   */
+  public function get_username()
+  {
+    return $this->username;
+  }
+  
+  /**
+   * set_discount
+   *
+   * @return void
+   */
+  public function set_discount()
+  {
+    $this->discount = 20;
+  }
+}

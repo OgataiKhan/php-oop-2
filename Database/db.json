@@ -2,7 +2,7 @@
   "food": [
     {
       "name": "Feline Delight",
-      "price": "3€",
+      "price": 3,
       "available": true,
       "expiration_date": "12/06/2024",
       "designed_for": "cats",
@@ -10,7 +10,7 @@
     },
     {
       "name": "Shepherd's Gourmet",
-      "price": "4€",
+      "price": 4,
       "available": false,
       "expiration_date": "10/05/2024",
       "designed_for": "dogs",
@@ -20,7 +20,7 @@
   "toys": [
     {
       "name": "Scratcher 1000",
-      "price": "20€",
+      "price": 20,
       "available": false,
       "material": "Hemp",
       "designed_for": "cats",
@@ -28,7 +28,7 @@
     },
     {
       "name": "Indestructibone",
-      "price": "8€",
+      "price": 8,
       "available": true,
       "material": "Rubber",
       "designed_for": "dogs",
@@ -38,7 +38,7 @@
   "beds": [
     {
       "name": "Comfy Pillowfort",
-      "price": "27€",
+      "price": 27,
       "available": true,
       "size": "40cm",
       "designed_for": "cats",
@@ -46,7 +46,7 @@
     },
     {
       "name": "Big Blue Blob",
-      "price": "42€",
+      "price": 42,
       "available": true,
       "size": "70cm",
       "designed_for": "dogs",

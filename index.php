@@ -41,7 +41,7 @@ require_once __DIR__ . '/Controllers/ControllerProduct.php';
               } ?>"></i> <?php echo $food_item->get_name(); ?></h5>
               <h6 class="card-subtitle mb-2 text-body-secondary">Food <?php if (!$food_item->get_available()) : ?><span class="text-danger ms-1">Out of stock</span><?php endif; ?></h6>
               <p class="card-text">Expiration date: <?php echo $food_item->get_expiration_date(); ?></p>
-              <p class="card-text text-end fs-3"><?php echo $food_item->get_price(); ?></p>
+              <p class="card-text text-end fs-3"><?php echo $food_item->get_price(); ?>€</p>
             </div>
           </li>
         <?php endforeach; ?>
@@ -58,7 +58,7 @@ require_once __DIR__ . '/Controllers/ControllerProduct.php';
               } ?>"></i> <?php echo $toy->get_name(); ?></h5>
               <h6 class="card-subtitle mb-2 text-body-secondary">Toy <?php if (!$toy->get_available()) : ?><span class="text-danger ms-1">Out of stock</span><?php endif; ?></h6>
               <p class="card-text">Material: <?php echo $toy->get_material(); ?></p>
-              <p class="card-text text-end fs-3"><?php echo $toy->get_price(); ?></p>
+              <p class="card-text text-end fs-3"><?php echo $toy->get_price(); ?>€</p>
             </div>
           </li>
         <?php endforeach; ?>
@@ -75,7 +75,7 @@ require_once __DIR__ . '/Controllers/ControllerProduct.php';
               } ?>"></i> <?php echo $bed->get_name(); ?></h5>
               <h6 class="card-subtitle mb-2 text-body-secondary">Bed <?php if (!$bed->get_available()) : ?><span class="text-danger ms-1">Out of stock</span><?php endif; ?></h6>
               <p class="card-text">Size: <?php echo $bed->get_size(); ?></p>
-              <p class="card-text text-end fs-3"><?php echo $bed->get_price(); ?></p>
+              <p class="card-text text-end fs-3"><?php echo $bed->get_price(); ?>€</p>
             </div>
           </li>
         <?php endforeach; ?>
