@@ -12,6 +12,7 @@ $beds = [];
 
 // food array
 foreach ($products_db['food'] as $foodData) {
+  /*
   $name = $foodData['name'];
   $price = $foodData['price'];
   $available = $foodData['available'];
@@ -21,6 +22,9 @@ foreach ($products_db['food'] as $foodData) {
 
   $food = new Food($name, $price, $available, $img, $designed_for, $expiration_date);
   $food[] = $food;
+  */
+
+  array_push($food, new Food($foodData['name'], $foodData['price'], $foodData['available'], $foodData['img'], $foodData['designed_for'], $foodData['expiration_date']));
 }
 
 // toys array
@@ -32,7 +36,7 @@ foreach ($products_db['toys'] as $toyData) {
   $designed_for = $foodData['designed_for'];
   $material = $toyData['material'];
 
-  $toy = new Toy($name, $price, $available, $img, $designed_for, $size);
+  $toy = new Toy($name, $price, $available, $img, $designed_for, $material);
   $toys[] = $toy;
 }
 
