@@ -31,7 +31,7 @@ require_once __DIR__ . '/Controllers/ControllerProduct.php';
       <ul class="d-flex justify-content-center flex-wrap">
         <!-- Food cards -->
         <?php foreach ($food as $food_item) : ?>
-          <li class="card m-3" style="width: 18rem;">
+          <li class="card m-3 shadow" style="width: 18rem;">
             <img src="img/<?php echo $food_item->get_img(); ?>" class="card-img-top object-fit-cover" alt="<?php echo $food_item->get_name(); ?>">
             <div class="card-body text-center">
               <h5 class="card-title"><i class="fa-solid fa-<?php if ($food_item->get_designed_for() === "cats") {
@@ -46,7 +46,40 @@ require_once __DIR__ . '/Controllers/ControllerProduct.php';
           </li>
         <?php endforeach; ?>
         <!-- /Food cards -->
-
+        <!-- Toy cards -->
+        <?php foreach ($toys as $toy) : ?>
+          <li class="card m-3 shadow" style="width: 18rem;">
+            <img src="img/<?php echo $toy->get_img(); ?>" class="card-img-top object-fit-cover" alt="<?php echo $toy->get_name(); ?>">
+            <div class="card-body text-center">
+              <h5 class="card-title"><i class="fa-solid fa-<?php if ($toy->get_designed_for() === "cats") {
+                echo 'cat';
+              } elseif ($toy->get_designed_for() === "dogs") {
+                echo 'dog';
+              } ?>"></i> <?php echo $toy->get_name(); ?></h5>
+              <h6 class="card-subtitle mb-2 text-body-secondary">Toy <?php if (!$toy->get_available()) : ?><span class="text-danger ms-1">Out of stock</span><?php endif; ?></h6>
+              <p class="card-text">Material: <?php echo $toy->get_material(); ?></p>
+              <p class="card-text text-end fs-3"><?php echo $toy->get_price(); ?></p>
+            </div>
+          </li>
+        <?php endforeach; ?>
+        <!-- /Toy cards -->
+        <!-- Bed cards -->
+        <?php foreach ($beds as $bed) : ?>
+          <li class="card m-3 shadow" style="width: 18rem;">
+            <img src="img/<?php echo $bed->get_img(); ?>" class="card-img-top object-fit-cover" alt="<?php echo $bed->get_name(); ?>">
+            <div class="card-body text-center">
+              <h5 class="card-title"><i class="fa-solid fa-<?php if ($bed->get_designed_for() === "cats") {
+                echo 'cat';
+              } elseif ($bed->get_designed_for() === "dogs") {
+                echo 'dog';
+              } ?>"></i> <?php echo $bed->get_name(); ?></h5>
+              <h6 class="card-subtitle mb-2 text-body-secondary">Bed <?php if (!$bed->get_available()) : ?><span class="text-danger ms-1">Out of stock</span><?php endif; ?></h6>
+              <p class="card-text">Size: <?php echo $bed->get_size(); ?></p>
+              <p class="card-text text-end fs-3"><?php echo $bed->get_price(); ?></p>
+            </div>
+          </li>
+        <?php endforeach; ?>
+        <!-- /Bed cards -->
       </ul>
     </div>
   </main>
