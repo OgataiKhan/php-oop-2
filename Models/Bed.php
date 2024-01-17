@@ -1,11 +1,14 @@
 <?php
 
+require_once __DIR__ . '/../Models/Product.php';
+
 /**
  * Bed
  */
-class Bed extends Product {
+class Bed extends Product
+{
   private $size;
-    
+
   /**
    * __construct
    *
@@ -19,7 +22,6 @@ class Bed extends Product {
   {
     parent::__construct($_name, $_price, $_available, $_img, $_designed_for);
     $this->set_size($_size);
-    
   }
 
   /**
