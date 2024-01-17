@@ -15,7 +15,7 @@ class Product
   protected $img = "no-img.jpg";
   protected $designed_for;
 
-  public function __construct(string $_name, int $_price, bool $_available, string $_img, string $_designed_for)
+  public function __construct(string $_name, float $_price, bool $_available, string $_img, string $_designed_for)
   {
     $this->set_name($_name);
     $this->set_price($_price);
@@ -38,7 +38,7 @@ class Product
   /**
    * get_price
    *
-   * @return void
+   * @return float
    */
   public function get_price()
   {
