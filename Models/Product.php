@@ -1,11 +1,15 @@
 <?php
 
+require_once __DIR__ . '/../Traits/Name.php';
+
 /**
  * Product
  */
 class Product
 {
-  protected $name;
+  use Name;
+
+  // protected $name;
   protected $price;
   protected $available = false;
   protected $img = "no-img.jpg";
@@ -18,27 +22,6 @@ class Product
     $this->set_available($_available);
     $this->set_img($_img);
     $this->set_designed_for($_designed_for);
-  }
-
-  /**
-   * set_name
-   *
-   * @param mixed $name
-   * @return void
-   */
-  public function set_name($name)
-  {
-    $this->name = $name;
-  }
-
-  /**
-   * get_name
-   *
-   * @return void
-   */
-  public function get_name()
-  {
-    return $this->name;
   }
 
   /**
