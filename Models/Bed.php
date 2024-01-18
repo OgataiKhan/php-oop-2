@@ -23,15 +23,18 @@ class Bed extends Product
     parent::__construct($_name, $_price, $_available, $_img, $_designed_for);
     $this->set_size($_size);
   }
-
+  
   /**
    * set_size
    *
-   * @param mixed $size
+   * @param  mixed $size
    * @return void
    */
   public function set_size($size)
   {
+    if (!is_string($size) || empty($size)) {
+      throw new Exception("Size must be a non-empty string.");
+    }
     $this->size = $size;
   }
 

@@ -23,15 +23,18 @@ class Toy extends Product {
     $this->set_material($_material);
     
   }
-
+  
   /**
    * set_material
    *
-   * @param mixed $material
+   * @param  mixed $material
    * @return void
    */
   public function set_material($material)
   {
+    if (!is_string($material) || empty($material)) {
+      throw new Exception("Material must be a non-empty string.");
+    }
     $this->material = $material;
   }
 

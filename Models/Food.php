@@ -23,15 +23,18 @@ class Food extends Product {
     $this->set_expiration_date($_expiration_date);
     
   }
-
+  
   /**
    * set_expiration_date
    *
-   * @param mixed $expiration_date
+   * @param  mixed $expiration_date
    * @return void
    */
   public function set_expiration_date($expiration_date)
   {
+    if (!is_string($expiration_date) || empty($expiration_date)) {
+      throw new Exception("Expiration date must be a non-empty string.");
+    }
     $this->expiration_date = $expiration_date;
   }
 
