@@ -1,6 +1,7 @@
 {
   "food": [
     {
+      "id": 1,
       "name": "Feline Delight",
       "price": 3.00,
       "available": true,
@@ -9,6 +10,7 @@
       "img": "cat-food1.png"
     },
     {
+      "id": 2,
       "name": "Shepherd's Gourmet",
       "price": 4.00,
       "available": false,
@@ -19,6 +21,7 @@
   ],
   "toys": [
     {
+      "id": 3,
       "name": "Scratcher 1000",
       "price": 20.00,
       "available": false,
@@ -27,6 +30,7 @@
       "img": "cat-toy1.jpg"
     },
     {
+      "id": 4,
       "name": "Indestructibone",
       "price": 8.00,
       "available": true,
@@ -37,6 +41,7 @@
   ],
   "beds": [
     {
+      "id": 5,
       "name": "Comfy Pillowfort",
       "price": 27.00,
       "available": true,
@@ -45,6 +50,7 @@
       "img": "cat-bed1.jpg"
     },
     {
+      "id": 6,
       "name": "Big Blue Blob",
       "price": 42.00,
       "available": true,

@@ -27,14 +27,17 @@ class Product
   /**
    * set_price
    *
-   * @param mixed $price
+   * @param  mixed $price
    * @return void
    */
   public function set_price($price)
   {
+    if (!is_numeric($price) || $price < 0) {
+      throw new Exception("Price must be a non-negative number.");
+    }
     $this->price = $price;
   }
-  
+
   /**
    * get_price
    *
@@ -48,18 +51,21 @@ class Product
   /**
    * set_available
    *
-   * @param mixed $available
+   * @param  mixed $available
    * @return void
    */
   public function set_available($available)
   {
+    if (!is_bool($available)) {
+      throw new Exception("Availability must be a boolean.");
+    }
     $this->available = $available;
   }
 
   /**
    * get_available
    *
-   * @return void
+   * @return bool
    */
   public function get_available()
   {
@@ -69,32 +75,38 @@ class Product
   /**
    * set_img
    *
-   * @param mixed $img
+   * @param  mixed $img
    * @return void
    */
   public function set_img($img)
   {
+    if (!is_string($img) || empty($img)) {
+      throw new Exception("Image path must be a non-empty string.");
+    }
     $this->img = $img;
   }
 
   /**
    * get_img
    *
-   * @return void
+   * @return string
    */
   public function get_img()
   {
     return $this->img;
   }
-
-    /**
+  
+  /**
    * set_designed_for
    *
-   * @param mixed $designed_for
+   * @param  mixed $designed_for
    * @return void
    */
   public function set_designed_for($designed_for)
   {
+    if (!is_string($designed_for) || empty($designed_for)) {
+      throw new Exception("Must be a non-empty string.");
+    }
     $this->designed_for = $designed_for;
   }
 
@@ -108,5 +120,3 @@ class Product
     return $this->designed_for;
   }
 }
-
-

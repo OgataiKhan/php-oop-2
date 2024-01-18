@@ -32,10 +32,11 @@ class User
   {
     $this->discount = 0;
   }
-
+  
   /**
    * get_discount
    *
+   * @return int
    */
   public function get_discount()
   {

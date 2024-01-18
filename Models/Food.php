@@ -38,7 +38,7 @@ class Food extends Product {
   /**
    * get_expiration_date
    *
-   * @return void
+   * @return string
    */
   public function get_expiration_date()
   {

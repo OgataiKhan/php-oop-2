@@ -38,7 +38,7 @@ class Bed extends Product
   /**
    * get_size
    *
-   * @return void
+   * @return string
    */
   public function get_size()
   {

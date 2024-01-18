@@ -38,7 +38,7 @@ class Toy extends Product {
   /**
    * get_material
    *
-   * @return void
+   * @return string
    */
   public function get_material()
   {
