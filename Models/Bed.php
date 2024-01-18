@@ -20,8 +20,12 @@ class Bed extends Product
    */
   public function __construct(string $_name, string $_price, bool $_available, string $_img, string $_designed_for, string $_size)
   {
-    parent::__construct($_name, $_price, $_available, $_img, $_designed_for);
-    $this->set_size($_size);
+    try {
+      parent::__construct($_name, $_price, $_available, $_img, $_designed_for);
+      $this->set_size($_size);
+    } catch (Exception $e) {
+      echo $e->getMessage();
+    }
   }
   
   /**

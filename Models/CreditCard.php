@@ -7,7 +7,7 @@ class CreditCard
 {
   private $number;
   private $expiration_year;
-  
+
   /**
    * __construct
    *
@@ -17,10 +17,14 @@ class CreditCard
    */
   public function __construct(int $_number, int $_expiration_year)
   {
-    $this->set_number($_number);
-    $this->set_expiration_year($_expiration_year);
+    try {
+      $this->set_number($_number);
+      $this->set_expiration_year($_expiration_year);
+    } catch (Exception $e) {
+      echo $e->getMessage();
+    }
   }
-    
+
   /**
    * set_number
    *
@@ -34,7 +38,7 @@ class CreditCard
     }
     $this->number = $number;
   }
-  
+
   /**
    * get_number
    *
@@ -44,7 +48,7 @@ class CreditCard
   {
     return $this->number;
   }
-  
+
   /**
    * set_expiration_year
    *
@@ -58,7 +62,7 @@ class CreditCard
     }
     $this->expiration_year = $expiration_year;
   }
-  
+
   /**
    * get_expiration_year
    *

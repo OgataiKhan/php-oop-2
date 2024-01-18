@@ -2,14 +2,20 @@
 
 require_once __DIR__ . '/../Models/User.php';
 
-class RegisteredUser extends User {
+class RegisteredUser extends User
+{
   private $username;
-
-  public function __construct(string $_username, $_creditCard = null) {
+  
+  public function __construct(string $_username, $_creditCard = null)
+  {
+    try {
       parent::__construct($_creditCard);
       $this->set_username($_username);
+    } catch (Exception $e) {
+      echo $e->getMessage();
+    }
   }
-  
+
   /**
    * set_username
    *
@@ -33,7 +39,7 @@ class RegisteredUser extends User {
   {
     return $this->username;
   }
-  
+
   /**
    * set_discount
    *

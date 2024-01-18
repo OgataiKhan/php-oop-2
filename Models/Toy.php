@@ -5,9 +5,10 @@ require_once __DIR__ . '/../Models/Product.php';
 /**
  * Toy
  */
-class Toy extends Product {
+class Toy extends Product
+{
   private $material;
-    
+
   /**
    * __construct
    *
@@ -19,11 +20,14 @@ class Toy extends Product {
    */
   public function __construct(string $_name, string $_price, bool $_available, string $_img, string $_designed_for, string $_material)
   {
-    parent::__construct($_name, $_price, $_available, $_img, $_designed_for);
-    $this->set_material($_material);
-    
+    try {
+      parent::__construct($_name, $_price, $_available, $_img, $_designed_for);
+      $this->set_material($_material);
+    } catch (Exception $e) {
+      echo $e->getMessage();
+    }
   }
-  
+
   /**
    * set_material
    *

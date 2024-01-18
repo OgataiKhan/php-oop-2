@@ -9,7 +9,6 @@ class Product
 {
   use Name;
 
-  // protected $name;
   protected $price;
   protected $available = false;
   protected $img = "no-img.jpg";
@@ -17,11 +16,15 @@ class Product
 
   public function __construct(string $_name, float $_price, bool $_available, string $_img, string $_designed_for)
   {
-    $this->set_name($_name);
-    $this->set_price($_price);
-    $this->set_available($_available);
-    $this->set_img($_img);
-    $this->set_designed_for($_designed_for);
+    try {
+      $this->set_name($_name);
+      $this->set_price($_price);
+      $this->set_available($_available);
+      $this->set_img($_img);
+      $this->set_designed_for($_designed_for);
+    } catch (Exception $e) {
+      echo $e->getMessage();
+    }
   }
 
   /**
@@ -95,7 +98,7 @@ class Product
   {
     return $this->img;
   }
-  
+
   /**
    * set_designed_for
    *
