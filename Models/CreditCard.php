@@ -20,8 +20,8 @@ class CreditCard
     $this->set_number($_number);
     $this->set_expiration_year($_expiration_year);
   }
-  
-    /**
+    
+  /**
    * set_number
    *
    * @param  mixed $number
@@ -29,6 +29,9 @@ class CreditCard
    */
   public function set_number($number)
   {
+    if (!is_numeric($number)) { // Assuming credit card numbers are 16 digits
+      throw new Exception("Card number must be numeric.");
+    }
     $this->number = $number;
   }
   
@@ -41,7 +44,7 @@ class CreditCard
   {
     return $this->number;
   }
-
+  
   /**
    * set_expiration_year
    *
@@ -50,6 +53,9 @@ class CreditCard
    */
   public function set_expiration_year($expiration_year)
   {
+    if (!is_numeric($expiration_year)) {
+      throw new Exception("Expiration year must be numeric.");
+    }
     $this->expiration_year = $expiration_year;
   }
   

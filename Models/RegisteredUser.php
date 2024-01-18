@@ -9,15 +9,18 @@ class RegisteredUser extends User {
       parent::__construct($_creditCard);
       $this->set_username($_username);
   }
-
-/**
+  
+  /**
    * set_username
    *
-   * @param mixed $username
+   * @param  mixed $username
    * @return void
    */
   public function set_username($username)
   {
+    if (!is_string($username) || empty($username)) {
+      throw new Exception("Username must be a non-empty string.");
+    }
     $this->username = $username;
   }
 
