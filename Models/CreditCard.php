@@ -29,7 +29,7 @@ class CreditCard
    */
   public function set_number($number)
   {
-    if (!is_numeric($number)) { // Assuming credit card numbers are 16 digits
+    if (!is_numeric($number)) {
       throw new Exception("Card number must be numeric.");
     }
     $this->number = $number;
